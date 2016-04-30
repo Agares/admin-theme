@@ -1,0 +1,21 @@
+$font-stack: Lato, sans-serif;
+
+@include lato-include-font('black');
+@include lato-include-font('normal');
+
+body {
+  font-family: $font-stack;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 900;
+}
+
+p {
+  margin: 0;
+}

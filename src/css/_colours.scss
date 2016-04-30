@@ -1,0 +1,39 @@
+$colour-background: #111;
+$colour-text: #eee;
+$colour-brand: #ff1885;
+$colour-link: lighten(desaturate($colour-brand, 50%), 30%);
+$colour-link-hover: lighten($colour-link, 20%);
+$colour-danger: saturate(adjust-hue($colour-brand, 15%), 5%);
+$colour-warning: saturate(adjust-hue($colour-brand, 66%), 10%);
+$colour-info: lighten(desaturate(adjust-hue($colour-brand, -80%), 20%), 20%);
+
+body {
+  background-color: $colour-background;
+  color: $colour-text;
+}
+
+a {
+  color: $colour-link;
+  transition: 200ms color ease-in;
+}
+
+a:hover, a.-hover {
+  color: $colour-link-hover;
+  transition: 200ms color ease-out;
+}
+
+.-brand {
+  color: $colour-brand;
+}
+
+.-danger {
+  color: $colour-danger;
+}
+
+.-info {
+  color: $colour-info;
+}
+
+.-warning {
+  color: $colour-warning;
+}

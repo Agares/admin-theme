@@ -4,12 +4,18 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer');
 
+const sassConfig = {
+    includePaths: [
+        './node_modules/'
+    ]
+};
+
 gulp.task('default', ['css']);
 
-gulp.task('css', function() {
+gulp.task('css', ['copy-font-awesome', 'copy-lato-font'], function() {
     gulp
         .src('src/css/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass(sassConfig).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(gulp.dest('dist/css'))
         .pipe(cssmin())
@@ -17,6 +23,16 @@ gulp.task('css', function() {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('watch', function() {
-    gulp.watch('./assets/sass/**/*.scss', ['css']);
+gulp.task('copy-font-awesome', function() {
+    return gulp.src('./node_modules/font-awesome/fonts/**/*.*')
+        .pipe(gulp.dest('./dist/fonts'));
+});
+
+gulp.task('copy-lato-font', function() {
+    return gulp.src('./node_modules/lato-font/fonts/**/*.*')
+        .pipe(gulp.dest('./dist/fonts'));
+});
+
+gulp.task('watch', ['default'], function() {
+    gulp.watch('./src/css/**/*.scss', ['css']);
 });
