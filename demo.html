@@ -7,6 +7,8 @@
 </head>
 <body>
     <nav class="main-menu">
+        <label for="main-menu-visible">menu visible</label>
+        <input type="checkbox" class="toggle" id="main-menu-visible" />
         <ul>
             <li><a href="#"><i class="fa fa-home"></i> Homepage</a></li>
             <li><a href="#"><i class="fa fa-recycle"></i> Some other page</a></li>
@@ -16,13 +18,23 @@
                     <li><a href="#"><i class="fa fa-file-zip-o"></i> Submenu element</a></li>
                     <li><a href="#"><i class="fa fa-pagelines"></i> Submenu element</a></li>
                     <li><a href="#"><i class="fa fa-rebel"></i> Submenu element</a></li>
-                    <li><a href="#"><i class="fa fa-object-group"></i> Submenu element</a></li>
-                    <li><a href="#"><i class="fa fa-navicon"></i> Submenu element</a></l>
+                    <li>
+                        <a href="#"><i class="fa fa-object-group"></i> Submenu element</a>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Nested</a></li>
+                            <li><a href="#"><i class="fa fa-angle-left"></i> Nested</a></li>
+                            <li><a href="#"><i class="fa fa-xing"></i> Nested</a></li>
+                            <li><a href="#"><i class="fa fa-rebel"></i> Nested</a></li>
+                            <li><a href="#"><i class="fa fa-calendar-times-o"></i> Nested</a></li>
+                            <li><a href="#"><i class="fa fa-microphone"></i> Lorem ipsum dolor sit amet adespicing elit.</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-navicon"></i> Submenu element</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
-    <div class="main-content">
+    <main>
         <p><strong>plain</strong> Lorem ipsum dolor sit amet.</p>
         <p><a href="#"><strong>link</strong> Lorem ipsum dolor sit amet.</a></p>
         <p><a href="#" class="-hover"><strong>link -hover</strong> Lorem ipsum dolor sit amet.</a></p>
@@ -30,6 +42,6 @@
         <p class="-danger"><strong>danger</strong> Lorem ipsum dolor sit amet.</p>
         <p class="-warning"><strong>warning</strong> Lorem ipsum dolor sit amet.</p>
         <p class="-info"><strong>info</strong> Lorem ipsum dolor sit amet.</p>
-    </div>
+    </main>
 </body>
 </html>

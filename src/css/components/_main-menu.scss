@@ -1,4 +1,8 @@
 .main-menu {
+  background-color: lighten($colour-background, 5%);
+  padding: 1ex;
+  margin-bottom: 1ex;
+
   li, ul {
     margin: 0;
     padding: 0;
@@ -13,12 +17,41 @@
   }
 
   a {
-    text-transform: uppercase;
     line-height: 2rem;
     display: block;
   }
 
   .fa {
     color: $colour-brand;
+    width: 16px;
+    text-align: center;
+    margin-right: 0.5ex;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    font-size: 0;
+
+    &::before {
+      @include fa-icon();
+      content: $fa-var-bars;
+      color: $colour-brand;
+      text-align: center;
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  & > ul {
+    display: none;
+  }
+
+  .toggle:checked + ul {
+    display: block;
   }
 }
