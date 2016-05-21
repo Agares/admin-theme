@@ -1,0 +1,35 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1ex 0;
+
+  th {
+    font-size: 1.1rem;
+  }
+
+  &, td, th {
+    border: 1px solid mix($colour-brand, $colour-background, 20%);
+  }
+
+  td {
+    border-right: 0;
+    border-left: 0;
+  }
+
+  td, th {
+    padding: 0.4ex;
+    text-align: center;
+  }
+
+  td.actions {
+    text-align: center;
+  }
+
+  thead, tfoot {
+    background-color: mix($colour-brand, $colour-background, 20%);
+  }
+
+  tbody tr:hover {
+    background-color: lighten($colour-background, 3%);
+  }
+}
