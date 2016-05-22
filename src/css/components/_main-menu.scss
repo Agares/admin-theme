@@ -54,4 +54,42 @@
   .toggle:checked + ul {
     display: block;
   }
+
+  @media (min-width: 40rem) {
+    margin: 0 0 1rem 0;
+    padding: 0;
+
+    .toggle, label {
+      display: none;
+    }
+
+    & > ul {
+      display: block;
+    }
+
+    & > ul > li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    & > ul > li:hover {
+      position: relative;
+
+      & > ul {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        background-color: $colour-background-alternate;
+        width: 20rem;
+
+        ul {
+          display: block;
+        }
+      }
+    }
+
+    ul ul {
+      display: none;
+    }
+  }
 }
