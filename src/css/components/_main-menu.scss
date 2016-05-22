@@ -1,5 +1,5 @@
 .main-menu {
-  background-color: lighten($colour-background, 5%);
+  background-color: $colour-background-alternate;
   padding: 1ex;
   margin-bottom: 1ex;
 
@@ -22,7 +22,7 @@
   }
 
   .fa {
-    color: $colour-brand;
+    color: $colour-info;
     width: 16px;
     text-align: center;
     margin-right: 0.5ex;

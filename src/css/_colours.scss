@@ -1,11 +1,12 @@
 $colour-background: #111;
+$colour-background-alternate: #1C1C20;
 $colour-text: #eee;
 $colour-brand: #ff1885;
-$colour-link: lighten(desaturate($colour-brand, 50%), 30%);
-$colour-link-hover: lighten($colour-link, 20%);
-$colour-danger: saturate(adjust-hue($colour-brand, 15%), 5%);
-$colour-warning: saturate(adjust-hue($colour-brand, 66%), 10%);
-$colour-info: lighten(desaturate(adjust-hue($colour-brand, -80%), 20%), 20%);
+$colour-link: #A8B4BB;
+$colour-link-hover: #919BA1;
+$colour-danger: #FF1323;
+$colour-warning: #FFE931;
+$colour-info: #99584C;
 
 body {
   background-color: $colour-background;
