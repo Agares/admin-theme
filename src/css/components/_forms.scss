@@ -1,0 +1,60 @@
+form {
+  label, input, select {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  p {
+    margin-bottom: 3ex;
+  }
+
+  label {
+    font-weight: 900;
+  }
+
+  input, select {
+    border: 0 none;
+
+    color: $colour-text;
+    border-bottom: 1px solid $colour-brand;
+    padding: 0.5ex 0;
+  }
+
+  input, select, option {
+    background-color: $colour-background;
+  }
+
+  select {
+    appearance: none;
+    background-image: radial-gradient(circle at calc(100% - 0.5rem) 50%, $colour-brand 0, $colour-brand 0.25rem, $colour-background calc(0.25rem + 1px));
+  }
+
+  option, optgroup {
+    font-family: $font-stack;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  optgroup {
+    font-weight: 900;
+  }
+
+  input:focus, select:focus {
+    outline: 0;
+  }
+
+  $colour-placeholder: mix($colour-text, $colour-background, 50%);
+
+  ::-webkit-input-placeholder { color: $colour-placeholder; }
+  ::-moz-placeholder { color: $colour-placeholder; opacity: 1; }
+  :-ms-input-placeholder { color: $colour-placeholder; }
+
+  .buttons-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}

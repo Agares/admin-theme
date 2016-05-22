@@ -1,0 +1,24 @@
+button,
+input[type=reset],
+input[type=submit],
+.button {
+  color: $colour-text;
+  font: $font-stack;
+  font-size: 1rem;
+  background-color: $colour-background;
+  padding: 1ex 0;
+  margin: 0;
+
+  display: inline-block;
+  width: 10ex;
+
+  border: 0 none;
+  border-bottom: 1px solid $colour-positive;
+
+  cursor: pointer;
+}
+
+input[type=reset],
+.button.-danger {
+  border-bottom-color: $colour-danger;
+}
