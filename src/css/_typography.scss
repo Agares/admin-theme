@@ -2,6 +2,7 @@ $font-stack: Lato, sans-serif;
 
 @include lato-include-font('black');
 @include lato-include-font('normal');
+@include lato-include-font('light');
 
 body {
   font-family: $font-stack;
@@ -45,8 +46,7 @@ h1 {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  margin: 0.4ex 0;
-  text-align: center;
+  font-weight: 300;
 }
 
 p {
