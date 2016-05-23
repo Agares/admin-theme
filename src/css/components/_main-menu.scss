@@ -6,6 +6,10 @@
   .branding {
     border: 0 none;
     color: $colour-brand;
+
+    &::after {
+      display: none;
+    }
   }
 
   li, ul {
