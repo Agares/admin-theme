@@ -3,8 +3,12 @@ form {
     display: block;
     width: 100%;
     padding: 0;
-    margin: 0;
     font-size: 1rem;
+  }
+
+  label, input, select, .buttons-container {
+    max-width: 20rem;
+    margin: 0 auto;
   }
 
   p {
@@ -54,7 +58,6 @@ form {
 
   .buttons-container {
     display: flex;
-    width: 100%;
     justify-content: space-around;
   }
 }
