@@ -3,6 +3,7 @@ $font-stack: Lato, sans-serif;
 @include lato-include-font('black');
 @include lato-include-font('normal');
 @include lato-include-font('light');
+@include lato-include-font('thin');
 
 body {
   font-family: $font-stack;
