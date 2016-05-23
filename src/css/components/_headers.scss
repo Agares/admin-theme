@@ -1,7 +1,13 @@
 h1,h2,h3,h4,h5,h6 {
-  border-bottom: 1px solid $colour-brand;
-
   text-align: center;
   margin: 0.75ex 0;
-  padding-bottom: 0.75ex;
+
+  &::after {
+    margin: 0.75ex auto 0 auto;
+    display: block;
+    content: " ";
+    height: 1px;
+    max-width: 10ex;
+    background-color: $colour-brand;
+  }
 }
